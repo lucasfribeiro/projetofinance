@@ -5,7 +5,7 @@
     --color-danger:#ff0060;
     --color-danger-variant: #ff88b6;
     --color-sucess:#1b9c85
-    --color-sucess-variant: #1cdfaf;
+    --color-sucess-variant: #3cdbbe;
     --color-warning:#f7d060;
     --color-warning-variant:#fde395;
 
@@ -34,7 +34,7 @@
     height: 100dvh;
 }
 
-.form-login{
+.form-cad{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,14 +100,14 @@
     outline: none;
 }
 
-.cad-link{
+.log-link{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: .5rem;
 }
 
-.cad-link a{
+.log-link a{
     text-decoration: none;
     color: var(--color-primary);
     font-weight: 600;
@@ -134,9 +134,9 @@
     color: var(--color-white);
     cursor: pointer;
     font-size: 16px;
+    border: 3px solid transparent;
     width: 100%;
     transition: border .3s ease-in;
-    border: 3px solid transparent;
 }
 
 #email_enter{

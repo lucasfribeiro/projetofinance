@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem vindo(a) ao Finance!</title>
+    <link rel="stylesheet" href="/src/styles/cadastro.css">
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="src/styles/login.css">
-  </head>
-  <body>
+</head>
+<body>
     <div class="container">
-        <div class="form-login">
+        <div class="form-cad">
             <div class="logo">
                 <i class='bx bx-dollar-circle'></i>
                 <h2>Finance</h2>
             </div>
-            <div class="form-login">
-                <p style="color: #1b77fd; font-weight: 600;">Faça login para acesar o site!</p>
+            <div class="form-cad">
+                <p style="color: #1b77fd; font-weight: 600;">Cadastre-se para acesar o site!</p>
                 <br>
-                <p>Fazer login com</p>
+                <p>Cadastrar com</p>
 
                 <div class="enter">
                     <button id="email_enter">
@@ -35,12 +34,21 @@
                 </div>
 
                 <div class="input-area">
+                    <div class="inputs">
+                        <i class='bx bx-user'></i>
+                        <input type="text" placeholder="Nome" id="name" required>
+                    </div>
+                    <div class="inputs">
+                        <i class='bx bx-briefcase'></i>
+                        <input type="text" placeholder="Trabalho" id="job" required>
+                    </div>
+
                     <div class="inputs" id="mail_input">
                         <i class='bx bx-at'></i>
                         <input type="email" placeholder="Email" id="email" required>
                     </div>
 
-                    <div class="inputs" id="phone_input">
+                    <div class="inputs phone" id="phone_input">
                         <i class='bx bx-phone'></i>
                         <input type="tel" placeholder="Telefone" id="pnohe" required>
                     </div>
@@ -50,18 +58,18 @@
                         <input type="password" placeholder="Senha" id="password" required>
                     </div>
                     <a href="/src/home/home.html">
-                        Entrar
+                        Cadastrar
                     </a>
                 </div>
 
-                <div class="cad-link">
-                    <p>Não possui uma conta?</p>
-                    <a href="/src/cadastro/cadastro.html">Cadastre-se</a>
+                <div class="log-link">
+                    <p>Já possui uma conta?</p>
+                    <a href="/index.html">Login</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="src/js/enter.js"></script>
-  </body>
+    <script src="/src/js/enter.js"></script>
+</body>
 </html>
