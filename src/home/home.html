@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finance | Controle financeiro</title>
+    <link rel="stylesheet" href="/src/styles/home.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <div class="menu">
+          <button id="open_menu">
+            <i class="bx bx-dock-left"></i>
+            <h3>Menu</h3>
+          </button>
+        </div>
+      </nav>
+
+      <div class="sidebar" id="sidebar">
+        <div class="top-sidebar">
+          <div class="logo">
+            <i class="bx bx-dollar-circle"></i>
+            <h2>Finance</h2>
+          </div>
+          <div class="close" id="close_btn">
+            <i class="bx bx-x"></i>
+          </div>
+        </div>
+        <div class="sidebar-links">
+          <button class="button-link" id="profile_btn">
+            <img src="src/images/user_avatar.png" alt="" />
+            <h3 class="name_item">Meu Perfil</h3>
+          </button>
+
+          <button class="button-link active" id="home_btn">
+            <i class="bx bx-home-alt-2"></i>
+            <h3 class="name_item">Início</h3>
+          </button>
+
+          <button class="button-link" id="lembretes_btn">
+            <i class="bx bx-calendar"></i>
+            <h3 class="name_item">Lembretes</h3>
+          </button>
+
+          <button class="button-link" id="desempenho_btn">
+            <i class="bx bx-line-chart"></i>
+            <h3 class="name_item">Desempenho</h3>
+          </button>
+
+          <button class="button-link" id="comousar_btn">
+            <i class="bx bx-cog"></i>
+            <h3 class="name_item">Como usar</h3>
+          </button>
+        </div>
+      </div>
+
+      <!--Página inicial-->
+      <div id="home_page" class="main">
+        <div class="content">
+          <h1>Início</h1>
+          <br />
+          <h2>Receitas</h2>
+
+          <div class="top-inicio">
+            <div class="rendas">
+              <h2>Receita fixa</h2>
+              <div class="input-area">
+                <input type="number" id="r_fixa" placeholder="R$ 0.00" />
+                <i class="bx bx-wallet"></i>
+              </div>
+            </div>
+
+            <div class="rendas">
+              <h2>Receita extra</h2>
+              <div class="input-area">
+                <input type="number" id="r_extra" placeholder="R$ 0.00" />
+                <i class="bx bx-money"></i>
+              </div>
+            </div>
+
+            <div class="rendas">
+              <h2>Receita total</h2>
+              <div class="result-renda-area">
+              <span id="r_total">R$ 0.00</span>
+                <button id="calc_r_total">Adicionar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="desempenho_page" class="main">
+        <div class="content">
+          <h1>Desempenho</h1>
+        </div>
+      </div>
+
+      <div id="lembretes_page" class="main">
+        <div class="content">
+          <h1>Lembretes</h1>
+        </div>
+      </div>
+
+      <div id="comousar_page" class="main">
+        <div class="content">
+          <h1>Como Usar</h1>
+        </div>
+      </div>
+
+      <div id="profile_page" class="main">
+        <div class="content">
+          <h1>Meu Perfil</h1>
+        </div>
+      </div>
+    </div>
+
+    <script src="/src/js/script.js"></script>
+  </body>
+</html>
