@@ -134,12 +134,26 @@ calcRenda.addEventListener('click', () => {
     const resultado = rFixa + rExtra;
     
 
-    if(rFixa & rExtra >= 0){
+    if(rFixa , rExtra >= 0){
         document.getElementById('r_total').innerText = `R$ ${resultado.toFixed(2)}`
-        return;
+        
 
     }else{
-        alert('Preencha todos os campos necessários!')
+      Toastify({
+        text: "Preencha todos os campos!  ",
+        duration: 2000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          fontSize:'14px',
+          boxShadow:'0',
+          fontWeight:"700",
+          borderRadius:"5px",
+          background:"#ff0060",
+        },
+      }).showToast();
     }
 
 })
