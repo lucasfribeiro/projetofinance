@@ -367,17 +367,41 @@ nav{
     display: none;
 }
 
-.alert{
+#alert{
+    display: none;
     position: absolute;
     background: var(--color-danger-variant);
-    width: 100%;
-    left: 50%;
-    right: 0;
+    width: 50%;
+    left: 500px;
     top: 0;
     padding: 20px;
+    transition: all .3s ease-in-out;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 0 10px 10px;
 }
 
-.alert p{
+@keyframes showAlert {
+    to{
+        top: 0;
+    }
+}
+
+#alert p{
     color: var(--color-danger);
     font-weight: 600;
+    font-size: 14px;
+}
+
+#alert button{
+    background: var(--color-danger);
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--color-white);
+}
+
+#alert i{
+    color: var(--color-danger);
+    font-size: 24px;
 }

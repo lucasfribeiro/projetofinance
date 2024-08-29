@@ -123,6 +123,11 @@ const calcRenda = document.getElementById('calc_r_total');
 
 const showRenda = document.getElementById('r_total');
 
+const alertCart = document.getElementById('alert');
+
+const alertCloseBtn = document.getElementById('close_alert')
+
+
 calcRenda.addEventListener('click', () => {
     const rFixa = parseFloat(document.getElementById('r_fixa').value);
     const rExtra = parseFloat(document.getElementById('r_extra').value);
@@ -135,7 +140,17 @@ calcRenda.addEventListener('click', () => {
         return;
 
     }else{
-        alert('preencha todos os campos')
+        Toastify({
+            text: "Preencha todos os campos necessários!",
+            duration: 2000,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "center", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "#ff0060",
+            },
+          }).showToast();
     }
 
 })
