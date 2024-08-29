@@ -140,7 +140,7 @@ calcRenda.addEventListener('click', () => {
 
     }else{
       Toastify({
-        text: "Preencha todos os campos!  ",
+        text: "Preencha todas as receitas necessárias!  ",
         duration: 2000,
         close: true,
         gravity: "top", // `top` or `bottom`

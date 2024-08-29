@@ -260,6 +260,10 @@ nav{
         margin-left: 1rem;
         margin-right: 1rem;
     }
+
+    .input-area-desp button{
+        width: 100%;
+    }
 }
 
 
@@ -268,7 +272,7 @@ nav{
 }
 
 .content{
-    width: 98%;
+    width: 97%;
     margin-top: 20px ;
 }
 
@@ -287,7 +291,7 @@ nav{
 .rendas{
     width: 40%;
     flex-grow: 2;
-    flex-basis: 300px;
+    flex-basis: 200px;
     padding: 10px;
     border-radius: 8px;
     border: 1px solid var(--color-info-dark);
@@ -404,4 +408,60 @@ nav{
 #alert i{
     color: var(--color-danger);
     font-size: 24px;
+}
+
+.despesas{
+    display: flex;
+    flex-direction: column;
+    width: 97%;
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--color-dark-variant);
+    background: var(--color-white);
+}
+
+.despesas h3{
+    font-size: 14px;
+}
+
+.input-area-desp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid var(--color-light) ;
+}
+
+.inputs-desp{
+    width: 100%;
+    margin-top: 10px;
+    flex-basis: 150px;
+}
+
+.inputs-desp p{
+    font-size: 14px;
+}
+
+.inputs-desp input,
+.inputs-desp select{
+    border: 1px solid var(--color-light);
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    outline: none;
+}
+
+.input-area-desp button{
+    border-radius: 5px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 600;
+    padding: 8px;
+    font-size: 12px;
+    cursor:pointer;
+    transition: all .3s ease-in;
 }
