@@ -3,6 +3,7 @@
 :root{
     --color-primary: #1f77db;
     --color-danger:#ff0060;
+    --color-danger-variant: #fcb6d1;
     --color-sucess:#1b9c85;
     --color-warning:#f7d060;
     --color-white:#fff;
@@ -364,4 +365,19 @@ nav{
 
 #lembretes_page {
     display: none;
+}
+
+.alert{
+    position: absolute;
+    background: var(--color-danger-variant);
+    width: 100%;
+    left: 50%;
+    right: 0;
+    top: 0;
+    padding: 20px;
+}
+
+.alert p{
+    color: var(--color-danger);
+    font-weight: 600;
 }

@@ -117,13 +117,25 @@ comousarBtn.addEventListener('click', () => {
 
 // Calcular rendas
 
+let rFixa = 0;
+
 const calcRenda = document.getElementById('calc_r_total');
 
 const showRenda = document.getElementById('r_total');
 
 calcRenda.addEventListener('click', () => {
-    rFixa = parseFloat(document.getElementById('r_fixa').value);
-    rExtra = parseFloat(document.getElementById('r_extra').value);
+    const rFixa = parseFloat(document.getElementById('r_fixa').value);
+    const rExtra = parseFloat(document.getElementById('r_extra').value);
     const resultado = rFixa + rExtra;
-    document.getElementById('r_total').innerText = `R$ ${resultado.toFixed(2)}`
+    
+
+    if(rFixa & rExtra > 0){
+        document.getElementById('r_total').innerText = `R$ ${resultado.toFixed(2)}`
+
+        return;
+
+    }else{
+        alert('preencha todos os campos')
+    }
+
 })
