@@ -9,15 +9,20 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link rel="shortcut icon" href="/src/images/website_icon.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="/src/images/website_icon.png"
+      type="image/x-icon"
+    />
   </head>
 
   <body>
     <div class="container">
-
-      
-
       <nav>
         <div class="menu">
           <button id="open_menu">
@@ -72,11 +77,9 @@
           <br />
           <h2>Receitas</h2>
 
-          
-
           <div class="top-inicio">
             <div class="rendas">
-              <h2>Receita fixa <span style="color: #ff0060;">*</span></h2>
+              <h2>Receita fixa <span style="color: #ff0060">*</span></h2>
               <div class="input-area">
                 <input type="number" id="r_fixa" placeholder="R$ 0.00" />
                 <i class="bx bx-wallet"></i>
@@ -84,7 +87,7 @@
             </div>
 
             <div class="rendas">
-              <h2>Receita extra <span style="color: #ff0060;">*</span></h2>
+              <h2>Receita extra <span style="color: #ff0060">*</span></h2>
               <div class="input-area">
                 <input type="number" id="r_extra" placeholder="R$ 0.00" />
                 <i class="bx bx-money"></i>
@@ -94,65 +97,108 @@
             <div class="rendas">
               <h2>Receita total</h2>
               <div class="result-renda-area">
-              <span id="r_total">R$ 0.00</span>
+                <span id="r_total">R$ 0.00</span>
                 <button id="calc_r_total">Adicionar</button>
               </div>
             </div>
           </div>
         </div>
-
-        <br>
+        <br />
         <h2>Despesas</h2>
         <div class="despesas">
-
           <h3>Adicione as informações sobre as despesas:</h3>
-          <br>
+          <br />
 
           <div class="input-area-desp">
-
             <div class="inputs-desp">
-              <p>Tipo <span style="color: #ff0060;">*</span></p>
-              <input type="text" placeholder="Ex.: Água" required>
+              <p>Tipo <span style="color: #ff0060">*</span></p>
+              <input type="text" placeholder="Ex.: Água" required />
             </div>
 
             <div class="inputs-desp">
-              <p>Valor <span style="color: #ff0060;">*</span></p>
-              <input type="number" placeholder="R$ 0.00" required>
+              <p>Valor <span style="color: #ff0060">*</span></p>
+              <input type="number" placeholder="R$ 0.00" required />
             </div>
 
-              <div class="inputs-desp">
-                <p>Data de vencimento <span style="color: #ff0060;">*</span></p>
-                <input type="date" placeholder="R$ 0.00" required>
-              </div>
+            <div class="inputs-desp">
+              <p>Data de vencimento <span style="color: #ff0060">*</span></p>
+              <input type="date" placeholder="R$ 0.00" required />
+            </div>
 
-              <div class="inputs-desp">
-                <p>Data de pagame</p>
-                <input type="date" placeholder="R$ 0.00" required>
-              </div>
+            <div class="inputs-desp">
+              <p>Situação <span style="color: #ff0060">*</span></p>
+              <select id="">
+                <option>Fixa</option>
+                <option>Variável</option>
+              </select>
+            </div>
 
-              <div class="inputs-desp">
-                <p>Situação</p>
-                <select id="">
-                  <option>Fixa</option>
-                  <option>Variável</option>
-                </select>
-              </div>
+            <div class="inputs-desp">
+              <p>Data de pagamento</p>
+              <input type="date" placeholder="R$ 0.00" required />
+            </div>
 
-              <div class="inputs-desp">
-                <p>Valor da multa</p>
-                <input type="number" placeholder="R$ 0.00" required>
-              </div>
+            <div class="inputs-desp">
+              <p>Valor da multa</p>
+              <input type="number" placeholder="R$ 0.00" required />
+            </div>
 
-              <div class="inputs-desp">
-                <p>Valor da juros</p>
-                <input type="number" placeholder="R$ 0.00" required>
-              </div>
+            <div class="inputs-desp">
+              <p>Valor da juros</p>
+              <input type="number" placeholder="R$ 0.00" required />
+            </div>
 
-              <div class="inputs-desp">
-                <button id="add_desp">Adicionar</button>
-              </div>
+            <button id="add_desp">Adicionar</button>
           </div>
 
+          <div class="desp-information">
+            <p>Informações adicionadas</p>
+            <div class="informations">
+              <h3>Conta de:</h3>
+              <div class="values">
+                <div class="values-information">
+                  <h4>Valor:</h4>
+                  <p>--</p>
+                </div>
+
+                <div class="values-information">
+                  <h4>Data de vencimento:</h4>
+                  <p>--</p>
+                </div>
+
+                <div class="values-information">
+                  <h4>Situação:</h4>
+                  <p>--</p>
+                </div>
+
+                <div class="values-information">
+                  <h4>Data de pagamento:</h4>
+                  <p>--</p>
+                </div>
+
+                <div class="values-information">
+                  <h4>Multa:</h4>
+                  <p>--</p>
+                </div>
+
+                <div class="values-information">
+                  <h4>Juros:</h4>
+                  <p>--</p>
+                </div>
+                <div class="button-area-desp">
+                  <button>
+                    <i class="bx bx-trash"></i>
+                    <p>Apagar</p>
+                  </button>
+
+                  <button>
+                    <i class="bx bx-pencil"></i>
+                    <p>Editar</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -181,7 +227,10 @@
       </div>
     </div>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
     <script src="/src/js/script.js"></script>
   </body>
 </html>
