@@ -39,7 +39,7 @@ html {
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   font-size: 0.8rem;
   user-select: none;
   overflow-x: hidden;
@@ -73,7 +73,6 @@ h3 {
 .sidebar {
   width: 180px;
   height: 100dvh;
-  position: static;
   background: var(--color-white);
   padding: 0.5rem;
   border-right: 1px solid var(--color-info-dark);
@@ -425,64 +424,57 @@ nav {
   transition: all 0.3s ease-in;
 }
 
-.desp-information {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  border-top: 1px dashed var(--color-info-dark);
-}
-
-.desp-information h3{
-    font-size: 14px;
-}
-
-.informations {
+.information-desp{
+  width: 97%;
   margin-top: 10px;
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid var(--color-dark-variant);
+  background: var(--color-white);
 }
 
-.informations h3{
-    display: flex;
-    font-size: 16px;
-    gap: .5rem;
+.information-desp h3{
+  font-size: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--color-info-dark);
 }
 
-.informations p{
-    font-weight: 600;
-}
-
-.values {
-  width: 100%;
+.values{
+  padding-top: 10px;
   display: flex;
   align-items: center;
-  margin-top: 10px;
   justify-content: space-between;
 }
 
-.button-area-desp {
+.value-desp{
   display: flex;
-  gap: 1rem;
-  padding: 0 20px;
+  flex-direction: column;
+  gap: .5rem;
+  font-size: 14px;
 }
 
-.button-area-desp button {
+.value-desp span{
+  font-weight: 700;
+  font-family: monospace;
+}
+
+.button-area-desp{
   display: flex;
   align-items: center;
   gap: .5rem;
-  padding: 5px 8px;
-  border-radius: 3px;
+}
+
+.button-area-desp button{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
   cursor: pointer;
+  background: var(--color-primary);
   color: var(--color-white);
-  font-weight: 600;
-  background: var(--color-danger);
+  border-radius: 3px;
+  padding: 5px 8px;
 }
 
 .button-area-desp button:last-child{
-    background: var(--color-sucess);
-}
-
-.values-information p{
-    font-size: 16px;
-    margin-top: 5px;
-    font-weight: 700;
-    font-family: "JetBrains Mono", sans-serif;
+  background: var(--color-danger);
 }

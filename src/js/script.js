@@ -160,4 +160,38 @@ calcRenda.addEventListener('click', () => {
 
 // Despesas
 
+let despesa = [];
+
 const addDesp = document.getElementById('add_desp');
+
+addDesp.addEventListener('click', addDespesas);
+
+function addDespesas(e){
+    e.preventDefault();
+
+    const nomeDesp = document.getElementById('name_desp').value;
+    const valorDesp = parseFloat(document.getElementById('valor_desp').value);
+    const venciDesp = document.getElementById('venci_desp').value;
+    const selectDesp = document.getElementById('select_desp').value;
+    const pagarDesp = document.getElementById('pagar_desp').value;
+    const multaDesp = parseFloat(document.getElementById('multa_desp').value);
+    const descDesp = parseFloat(document.getElementById('desc_desp').value);
+
+    const totalDesp = valorDesp + multaDesp - descDesp
+
+    const despesas ={
+        id: Date.now(),
+        nome: nomeDesp,
+        valor: valorDesp,
+        vencimento: venciDesp,
+        descricao: selectDesp,
+        pagamento: pagarDesp,
+        multa: multaDesp,
+        desconto: descDesp,
+        total: totalDesp
+    }
+
+    despesa.push(despesas)
+
+    document.querySelector('.inputs-desp').reset()
+}

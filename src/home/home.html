@@ -111,94 +111,97 @@
 
           <div class="input-area-desp">
             <div class="inputs-desp">
-              <p>Tipo <span style="color: #ff0060">*</span></p>
-              <input type="text" placeholder="Ex.: Água" required />
+              <p>Nome <span style="color: #ff0060">*</span></p>
+              <input type="text" placeholder="Ex.: Água" id="name_desp" required />
             </div>
 
             <div class="inputs-desp">
               <p>Valor <span style="color: #ff0060">*</span></p>
-              <input type="number" placeholder="R$ 0.00" required />
+              <input type="number" placeholder="R$ 0.00" id="valor_desp" required />
             </div>
 
             <div class="inputs-desp">
               <p>Data de vencimento <span style="color: #ff0060">*</span></p>
-              <input type="date" placeholder="R$ 0.00" required />
+              <input type="date" placeholder="R$ 0.00" id="venci_desp" required />
             </div>
 
             <div class="inputs-desp">
-              <p>Situação <span style="color: #ff0060">*</span></p>
-              <select id="select_desp">
+              <p>Descrição <span style="color: #ff0060">*</span></p>
+              <select id="select_desp" required>
                 <option>--</option>
-                <option>Fixa</option>
-                <option>Variável</option>
+                <option value="Fixa">Fixa</option>
+                <option value="Variável">Variável</option>
               </select>
             </div>
 
             <div class="inputs-desp">
               <p>Data de pagamento</p>
-              <input type="date" placeholder="R$ 0.00" required />
+              <input type="date" placeholder="R$ 0.00" id="pagar_desp" />
             </div>
 
             <div class="inputs-desp">
               <p>Valor da multa</p>
-              <input type="number" placeholder="R$ 0.00" required />
+              <input type="number" placeholder="R$ 0.00" id="multa_desp" />
             </div>
 
             <div class="inputs-desp">
-              <p>Valor da juros</p>
-              <input type="number" placeholder="R$ 0.00" required />
+              <p>Valor do desconto</p>
+              <input type="number" placeholder="R$ 0.00" id="desc_desp" />
             </div>
 
             <button id="add_desp">Adicionar</button>
           </div>
+        </div>
 
-          <div class="desp-information">
-            <h3>Informações adicionadas:</h3>
-            <div class="informations">
-              <h3>Conta de: <p>Água</p></h3>
-              <div class="values">
-                <div class="values-information">
-                  <h3>Valor:</h3>
-                  <p>--</p>
-                </div>
-
-                <div class="values-information">
-                  <h3>Data de vencimento:</h3>
-                  <p>--</p>
-                </div>
-
-                <div class="values-information">
-                  <h3>Situação:</h3>
-                  <p>--</p>
-                </div>
-
-                <div class="values-information">
-                  <h3>Data de pagamento:</h3>
-                  <p>--</p>
-                </div>
-
-                <div class="values-information">
-                  <h3>Multa:</h3>
-                  <p>--</p>
-                </div>
-
-                <div class="values-information">
-                  <h3>Juros:</h3>
-                  <p>--</p>
-                </div>
-                <div class="button-area-desp">
-                  <button>
-                    <i class="bx bx-trash"></i>
-                    <p>Apagar</p>
-                  </button>
-
-                  <button>
-                    <i class="bx bx-pencil"></i>
-                    <p>Editar</p>
-                  </button>
-                </div>
-              </div>
+        <div class="information-desp">
+          <h3>Conta de:</h3>
+          <div class="values">
+            <div class="value-desp">
+              <p>Valor</p>
+              <span>R$ 0.00</span>
             </div>
+
+            <div class="value-desp">
+              <p>Vencimento</p>
+              <span>--</span>
+            </div>
+
+            <div class="value-desp">
+              <p>Descrição</p>
+              <span>--</span>
+            </div>
+
+            <div class="value-desp">
+              <p>Pagamento</p>
+              <span>--</span>
+            </div>
+
+            <div class="value-desp">
+              <p>Multa</p>
+              <span>--</span>
+            </div>
+
+            <div class="value-desp">
+              <p>Desconto</p>
+              <span>--</span>
+            </div>
+
+            <div class="value-desp">
+              <p>Total a pagar</p>
+              <span>--</span>
+            </div>
+
+            <div class="button-area-desp">
+              <button>
+                <i class="bx bx-pencil"></i>
+                <p>Editar</p>
+              </button>
+              <button>
+                <i class="bx bx-trash"></i>
+                <p>Apagar</p>
+              </button>
+            </div>
+            
           </div>
         </div>
       </div>
