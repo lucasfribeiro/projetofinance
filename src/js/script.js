@@ -157,3 +157,7 @@ calcRenda.addEventListener('click', () => {
     }
 
 })
+
+// Despesas
+
+const addDesp = document.getElementById('add_desp');

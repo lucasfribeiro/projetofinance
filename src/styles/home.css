@@ -368,45 +368,6 @@ nav {
   display: none;
 }
 
-#alert {
-  display: none;
-  position: absolute;
-  background: var(--color-danger-variant);
-  width: 50%;
-  left: 500px;
-  top: 0;
-  padding: 20px;
-  transition: all 0.3s ease-in-out;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 0 0 10px 10px;
-}
-
-@keyframes showAlert {
-  to {
-    top: 0;
-  }
-}
-
-#alert p {
-  color: var(--color-danger);
-  font-weight: 600;
-  font-size: 14px;
-}
-
-#alert button {
-  background: var(--color-danger);
-  padding: 5px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-  color: var(--color-white);
-}
-
-#alert i {
-  color: var(--color-danger);
-  font-size: 24px;
-}
-
 .despesas {
   display: flex;
   flex-direction: column;
@@ -468,10 +429,25 @@ nav {
   display: flex;
   flex-direction: column;
   padding: 10px;
+  border-top: 1px dashed var(--color-info-dark);
+}
+
+.desp-information h3{
+    font-size: 14px;
 }
 
 .informations {
   margin-top: 10px;
+}
+
+.informations h3{
+    display: flex;
+    font-size: 16px;
+    gap: .5rem;
+}
+
+.informations p{
+    font-weight: 600;
 }
 
 .values {
@@ -502,4 +478,11 @@ nav {
 
 .button-area-desp button:last-child{
     background: var(--color-sucess);
+}
+
+.values-information p{
+    font-size: 16px;
+    margin-top: 5px;
+    font-weight: 700;
+    font-family: "JetBrains Mono", sans-serif;
 }
