@@ -162,9 +162,7 @@ calcRenda.addEventListener('click', () => {
 
 let despesa = [];
 
-const addDesp = document.getElementById('add_desp');
-
-addDesp.addEventListener('click', addDespesas);
+document.getElementById('form_desp').addEventListener('submit', addDespesas);
 
 function addDespesas(e){
     e.preventDefault();
@@ -192,6 +190,96 @@ function addDespesas(e){
     }
 
     despesa.push(despesas)
+    document.getElementById('form_desp').reset();
+    listarDespesa()
+    calcTotal()
+}
 
-    document.querySelector('.inputs-desp').reset()
+function listarDespesa(){
+
+    document.getElementById('lista-despesas').style.display = 'block';
+
+    const listaDesp = document.getElementById('information-desp');
+    listaDesp.innerHTML = ''
+
+    despesa.forEach(despesas => {
+        const row = document.createElement('div');
+
+        row.innerHTML = `
+        <h3>Conta de: ${despesas.nome}</h3>
+          <div class="values">
+            <div class="value-desp">
+              <p>Valor</p>
+              <span>R$ ${despesas.valor.toFixed(2)}</span>
+            </div>
+
+            <div class="value-desp">
+              <p>Vencimento</p>
+              <span>${despesas.vencimento}</span>
+            </div>
+
+            <div class="value-desp">
+              <p>Descrição</p>
+              <span>${despesas.descricao}</span>
+            </div>
+
+            <div class="value-desp">
+              <p>Pagamento</p>
+              <span>${despesas.pagamento}</span>
+            </div>
+
+            <div class="value-desp">
+              <p>Multa</p>
+              <span>R$ ${despesas.multa.toFixed(2)}</span>
+            </div>
+
+            <div class="value-desp">
+              <p>Desconto</p>
+              <span>R$ ${despesas.desconto.toFixed(2)}</span>
+            </div>
+
+            <div class="value-desp">
+              <p>Total a pagar</p>
+              <span>R$ ${despesas.total.toFixed(2)}</span>
+            </div>
+
+            <div class="button-area-desp">
+              <button onClick='editarDespesa(${despesas.id})'>
+                <i class="bx bx-pencil"></i>
+                <p>Editar</p>
+              </button>
+              <button onClick='apagarDespesa(${despesas.id})'>
+                <i class="bx bx-trash"></i>
+                <p>Apagar</p>
+              </button>
+            </div>
+        `;
+
+        listaDesp.appendChild(row)
+    })
+}
+
+function calcTotal(){
+    const totalDesp = despesa.reduce((total, despesas) => total + despesas.total, 0);
+    document.getElementById('total_desp').innerText = totalDesp.toFixed(2);
+}
+
+function apagarDespesa(id){
+    despesa = despesa.filter(despesas => despesas.id !== id);
+    listarDespesa();
+    calcTotal();
+}
+
+function editarDespesa(id){
+    const despesas = despesa.find(despesas => despesas.id == id);
+
+    document.getElementById('name_desp').value = despesas.nome;
+    document.getElementById('valor_desp').value = despesas.valor;
+    document.getElementById('venci_desp').value = despesas.vencimento;
+    document.getElementById('select_desp').value = despesas.descricao;
+    document.getElementById('pagar_desp').value = despesas.pagamento;
+    document.getElementById('multa_desp').value = despesas.multa;
+    document.getElementById('desc_desp').value = despesas.desconto;
+    
+    apagarDespesa(id)
 }

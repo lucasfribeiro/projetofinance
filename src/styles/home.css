@@ -424,8 +424,9 @@ nav {
   transition: all 0.3s ease-in;
 }
 
-.information-desp{
+#lista-despesas{
   width: 97%;
+  display: none;
   margin-top: 10px;
   border-radius: 10px;
   padding: 12px;
@@ -433,14 +434,47 @@ nav {
   background: var(--color-white);
 }
 
-.information-desp h3{
+#lista-despesas h3{
+  font-size: 14px;
+}
+
+#information-desp{
+  width: 100%;
+  margin-top: 10px;
+}
+
+#information-desp h3{
   font-size: 16px;
   padding-bottom: 8px;
   border-bottom: 1px dashed var(--color-info-dark);
 }
 
+@media screen and (max-width:1000px){
+  .values{
+    flex-direction: column;
+  }
+
+  .value-desp{
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid var(--color-light);
+  }
+
+  .button-area-desp{
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .button-area-desp button{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .values{
   padding-top: 10px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;

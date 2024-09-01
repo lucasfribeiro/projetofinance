@@ -109,7 +109,7 @@
           <h3>Adicione as informações sobre as despesas:</h3>
           <br />
 
-          <div class="input-area-desp">
+          <form class="input-area-desp" id="form_desp">
             <div class="inputs-desp">
               <p>Nome <span style="color: #ff0060">*</span></p>
               <input type="text" placeholder="Ex.: Água" id="name_desp" required />
@@ -117,7 +117,7 @@
 
             <div class="inputs-desp">
               <p>Valor <span style="color: #ff0060">*</span></p>
-              <input type="number" placeholder="R$ 0.00" id="valor_desp" required />
+              <input type="number" placeholder="R$ 0.00" id="valor_desp" step="0.01" required />
             </div>
 
             <div class="inputs-desp">
@@ -141,68 +141,22 @@
 
             <div class="inputs-desp">
               <p>Valor da multa</p>
-              <input type="number" placeholder="R$ 0.00" id="multa_desp" />
+              <input type="number" placeholder="R$ 0.00" id="multa_desp" step="0.01"  />
             </div>
 
             <div class="inputs-desp">
               <p>Valor do desconto</p>
-              <input type="number" placeholder="R$ 0.00" id="desc_desp" />
+              <input type="number" placeholder="R$ 0.00" id="desc_desp" step="0.01" />
             </div>
 
-            <button id="add_desp">Adicionar</button>
-          </div>
+            <button id="add_desp" type="submit">Adicionar</button>
+          </form>
         </div>
 
-        <div class="information-desp">
-          <h3>Conta de:</h3>
-          <div class="values">
-            <div class="value-desp">
-              <p>Valor</p>
-              <span>R$ 0.00</span>
-            </div>
-
-            <div class="value-desp">
-              <p>Vencimento</p>
-              <span>--</span>
-            </div>
-
-            <div class="value-desp">
-              <p>Descrição</p>
-              <span>--</span>
-            </div>
-
-            <div class="value-desp">
-              <p>Pagamento</p>
-              <span>--</span>
-            </div>
-
-            <div class="value-desp">
-              <p>Multa</p>
-              <span>--</span>
-            </div>
-
-            <div class="value-desp">
-              <p>Desconto</p>
-              <span>--</span>
-            </div>
-
-            <div class="value-desp">
-              <p>Total a pagar</p>
-              <span>--</span>
-            </div>
-
-            <div class="button-area-desp">
-              <button>
-                <i class="bx bx-pencil"></i>
-                <p>Editar</p>
-              </button>
-              <button>
-                <i class="bx bx-trash"></i>
-                <p>Apagar</p>
-              </button>
-            </div>
-            
-          </div>
+        <div id="lista-despesas">
+          <h3>Informações das despesas:</h3>
+          <div id="information-desp"><!--Depesas aqui--></div>
+          <h2>Total: R$ <span id="total_desp"> 0.00 </span> </h2>
         </div>
       </div>
 
