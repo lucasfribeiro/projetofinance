@@ -149,6 +149,11 @@
               <input type="number" placeholder="R$ 0.00" id="desc_desp" step="0.01" />
             </div>
 
+            <div class="inputs-desp">
+              <p>Valor do juros</p>
+              <input type="number" placeholder="R$ 0.00" id="juroes_desp" step="0.01" />
+            </div>
+
             <button id="add_desp" type="submit">Adicionar</button>
           </form>
         </div>
@@ -156,7 +161,10 @@
         <div id="lista-despesas">
           <h3>Informações das despesas:</h3>
           <div id="information-desp"><!--Depesas aqui--></div>
-          <h2>Total: R$ <span id="total_desp"> 0.00 </span> </h2>
+          <div class="totaldesp">
+            <h2>Total: R$ <span id="total_desp"> 0.00 </span> </h2>
+          </div>
+          
         </div>
         <br>
         <h2>Saldo</h2>

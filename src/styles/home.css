@@ -175,6 +175,10 @@ h3 {
   .container{
     width: 96%;
   }
+
+  #lista-despesas{
+    height: 200px;
+  }
 }
 
 nav {
@@ -429,16 +433,30 @@ nav {
 
 #lista-despesas{
   width: 97%;
-  display: none;
-  margin-top: 10px;
+  display: block;
+  height: 350px;
+  position: relative;
   border-radius: 10px;
-  padding: 12px;
+  margin-top: 10px;
   border: 1px solid var(--color-dark-variant);
   background: var(--color-white);
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 #lista-despesas h3{
   font-size: 14px;
+  margin: 10px 20px;
+}
+
+.totaldesp{
+  margin: 0;
+  top: 714px;
+  border-radius: 0 0 0px 10px;
+  position: fixed;
+  border-top: 1px solid var(--color-dark-variant);
+  padding: 10px;
+  width: 87%;
 }
 
 #information-desp{
@@ -452,7 +470,7 @@ nav {
   border-bottom: 1px dashed var(--color-info-dark);
 }
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:1100px){
   .values{
     flex-direction: column;
   }
