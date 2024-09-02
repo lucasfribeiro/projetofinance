@@ -283,3 +283,20 @@ function editarDespesa(id){
     
     apagarDespesa(id)
 }
+
+// Saldo
+
+function calcSaldo(){
+
+  const rFixa = parseFloat(document.getElementById('r_fixa').value);
+  const rExtra = parseFloat(document.getElementById('r_extra').value);
+  const resultado = rFixa + rExtra;
+
+  calcTotal();
+
+  const totalDesp = despesa.reduce((total, despesas) => total + despesas.total, 0);
+
+  const resultadoSaldo = resultado - totalDesp
+
+  document.getElementById('saldo_valor').innerHTML = `${resultadoSaldo.toFixed(2)}`
+}
