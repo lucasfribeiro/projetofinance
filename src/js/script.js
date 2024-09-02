@@ -287,6 +287,7 @@ function editarDespesa(id){
     document.getElementById('pagar_desp').value = despesas.pagamento;
     document.getElementById('multa_desp').value = despesas.multa;
     document.getElementById('desc_desp').value = despesas.desconto;
+    document.getElementById('juros_desp').value = despesas.juros;
     
     apagarDespesa(id)
 }
