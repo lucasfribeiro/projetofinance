@@ -174,8 +174,9 @@ function addDespesas(e){
     const pagarDesp = document.getElementById('pagar_desp').value;
     const multaDesp = parseFloat(document.getElementById('multa_desp').value);
     const descDesp = parseFloat(document.getElementById('desc_desp').value);
+    const jurosDesp = parseFloat(document.getElementById('juros_desp').value);
 
-    const totalDesp = valorDesp + multaDesp - descDesp
+    const totalDesp = valorDesp + multaDesp - descDesp + jurosDesp
 
     const despesas ={
         id: Date.now(),
@@ -186,6 +187,7 @@ function addDespesas(e){
         pagamento: pagarDesp,
         multa: multaDesp,
         desconto: descDesp,
+        juros: jurosDesp,
         total: totalDesp
     }
 
@@ -197,7 +199,7 @@ function addDespesas(e){
 
 function listarDespesa(){
 
-    document.getElementById('lista-despesas').style.display = 'block';
+    document.getElementById('lista-despesas').style.display = 'flex';
 
     const listaDesp = document.getElementById('information-desp');
     listaDesp.innerHTML = ''
@@ -236,6 +238,11 @@ function listarDespesa(){
             <div class="value-desp">
               <p>Desconto</p>
               <span>R$ ${despesas.desconto.toFixed(2)}</span>
+            </div>
+
+            <div class="value-desp">
+              <p>Juros</p>
+              <span>R$ ${despesas.juros.toFixed(2)}</span>
             </div>
 
             <div class="value-desp">

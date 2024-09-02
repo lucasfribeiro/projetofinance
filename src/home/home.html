@@ -128,7 +128,6 @@
             <div class="inputs-desp">
               <p>Descrição <span style="color: #ff0060">*</span></p>
               <select id="select_desp" required>
-                <option>--</option>
                 <option value="Fixa">Fixa</option>
                 <option value="Variável">Variável</option>
               </select>
@@ -149,6 +148,11 @@
               <input type="number" placeholder="R$ 0.00" id="desc_desp" step="0.01" />
             </div>
 
+            <div class="inputs-desp">
+              <p>Valor do juros</p>
+              <input type="number" placeholder="R$ 0.00" id="juros_desp" step="0.01" />
+            </div>
+
             <button id="add_desp" type="submit">Adicionar</button>
           </form>
         </div>
@@ -156,7 +160,7 @@
         <div id="lista-despesas">
           <h3>Informações das despesas:</h3>
           <div id="information-desp"><!--Depesas aqui--></div>
-          <h2>Total: R$ <span id="total_desp"> 0.00 </span> </h2>
+            <h2>Total: R$ <span id="total_desp"> 0.00 </span> </h2>
         </div>
         <br>
         <h2>Saldo</h2>

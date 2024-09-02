@@ -147,33 +147,15 @@ h3 {
   font-size: 20px;
 }
 
-@media screen and (max-width: 768px) {
-  .top-sidebar {
-    justify-content: center;
+@media  screen and (max-width:1225px) {
+  .sidebar{
+    height: 105dvh;
   }
+}
 
-  .top-sidebar i {
-    font-size: 30px;
-  }
-
-  .button-link h3 {
-    display: none;
-  }
-
-  .button-link {
-    justify-content: center;
-  }
-
-  .logo h2 {
-    display: none;
-  }
-
-  .sidebar {
-    width: 70px;
-  }
-
-  .container{
-    width: 96%;
+@media  screen and (max-width:800px) {
+  .sidebar{
+    height: 140dvh;
   }
 }
 
@@ -205,7 +187,7 @@ nav {
 
 /* --Mobile-- */
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 768px) {
   nav {
     display: block;
   }
@@ -429,10 +411,15 @@ nav {
 
 #lista-despesas{
   width: 97%;
+  height: 180px;
   display: none;
+  flex-direction: column;
+  justify-content: space-between;
   margin-top: 10px;
   border-radius: 10px;
   padding: 12px;
+  overflow: hidden;
+  overflow-y: scroll;
   border: 1px solid var(--color-dark-variant);
   background: var(--color-white);
 }
