@@ -308,3 +308,26 @@ function calcSaldo(){
 
   document.getElementById('saldo_valor').innerHTML = `${resultadoSaldo.toFixed(2)}`
 }
+
+// Abrir e fechar modal de editar perfil
+
+const modalUser = document.getElementById('modal_user');
+const openModal = document.getElementById('open_modal');
+const closeModal = document.getElementById('close_modal');
+
+openModal.addEventListener('click', () => {
+  modalUser.style.display = 'flex'
+})
+
+closeModal.addEventListener('click', () => {
+  modalUser.style.display = 'none'
+})
+
+// Editar foto de perfil
+
+const userAvatar = document.getElementById('user_avatar2');
+const newPhoto = document.getElementById('new_photo');
+
+newPhoto.addEventListener('change', () => {
+  userAvatar.src = URL.createObjectURL(newPhoto.files[0])
+})

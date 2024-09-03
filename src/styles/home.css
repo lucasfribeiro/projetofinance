@@ -88,7 +88,9 @@ h3 {
 
 .sidebar-links img {
   width: 20px;
-  border-radius: 50px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .button-link {
@@ -546,7 +548,9 @@ nav {
 
 .user-area img{
   width: 20rem;
-  border-radius: 150px;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .user-information{
@@ -588,7 +592,7 @@ nav {
 #modal_user{
   position: fixed;
   z-index: 99;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -610,6 +614,15 @@ nav {
   border-bottom: 1px solid var(--color-light);
 }
 
+.top-modal button{
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: var(--color-danger);
+  color: var(--color-white);
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .profile-form{
   padding-top: 10px;
   display: flex;
@@ -622,4 +635,31 @@ nav {
   border-radius: 5px;
   border: 1px solid var(--color-light);
   outline: none;
+}
+
+.profile-form input::file-selector-button{
+  color: var(--color-white);
+  padding: 8px;
+  background: var(--color-primary);
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile-form #new_photo {
+  border: 0;
+}
+
+.profile-form label{
+  font-size: 14px;
+}
+
+.profile-form button{
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--color-sucess);
+  color: var(--color-white);
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 700;
 }

@@ -34,7 +34,7 @@
       </div>
       <div class="sidebar-links">
         <button class="button-link" id="profile_btn">
-          <img src="/src/images/user_avatar.png" alt="" />
+          <i class="bx bx-user"></i>
           <h3 class="name_item">Meu Perfil</h3>
         </button>
 
@@ -184,7 +184,7 @@
 
         <div class="user-area">
           <div class="user-information">
-            <img src="/src/images/user_avatar.png" alt="avatarUser">
+            <img src="/src/images/user_avatar.png" id="user_avatar2">
             <h2>Nome</h2>
             <h4>Profissão</h4>
             <h3>email@email.com</h3>
@@ -201,15 +201,24 @@
       <div class="modal">
         <div class="top-modal">
           <h2>Editar Perfil</h2>
-          <button>Fechar</button>
+          <button id="close_modal">Fechar</button>
         </div>
         <div class="profile-form">
+          <label for="name">Nome:</label>
           <input type="text" placeholder="Novo nome" id="new_name">
-          <input type="text" placeholder="Novo nome" id="new_name">
+
+          <label for="photo">Foto:</label>
+          <input type="file" placeholder="Nova foto" id="new_photo">
+
+          <label for="password">Senha:</label>
           <input type="password" placeholder="Nova senha" id="new_password">
+
+          <label for="job">Profissão:</label>
           <input type="text" placeholder="Nova profissão" id="new_job">
+
+          <label for="email">Email:</label>
           <input type="email" placeholder="Novo email" id="new_email">
-          <button>Salvar Alterações</button>
+          <button id="save_edit">Salvar Alterações</button>
         </div>
       </div>
     </div>
