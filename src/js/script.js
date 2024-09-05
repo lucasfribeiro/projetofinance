@@ -331,3 +331,89 @@ const newPhoto = document.getElementById('new_photo');
 newPhoto.addEventListener('change', () => {
   userAvatar.src = URL.createObjectURL(newPhoto.files[0])
 })
+
+const today = new Date();
+const year = today.getFullYear()
+
+var options = {
+  series: [{
+  name: 'Saldo',
+  data: [2000, 3650, 400, 3786, 1459, 3200, 990, 3466, 2099, 1567, 2788, 1678]
+}],
+  chart: {
+  height: 350,
+  type: 'bar',
+},
+plotOptions: {
+  bar: {
+    borderRadius: 0,
+    dataLabels: {
+      position: 'top' // top, center, bottom
+    },
+  }
+},
+dataLabels: {
+  enabled: true,
+  formatter: function (val) {
+    return 'R$ ' + val ;
+  },
+  offsetY: -20,
+  style: {
+    fontSize: '12px',
+    colors: ["#304758"]
+  }
+},
+
+xaxis: {
+  categories: ["Janeiro", "Feveiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+  position: 'top',
+  axisBorder: {
+    show: false
+  },
+  axisTicks: {
+    show: false
+  },
+  crosshairs: {
+    fill: {
+      type: 'gradient',
+      gradient: {
+        colorFrom: '#D8E3F0',
+        colorTo: '#BED1E6',
+        stops: [0, 100],
+        opacityFrom: 0.4,
+        opacityTo: 0.5,
+      }
+    }
+  },
+  tooltip: {
+    enabled: true,
+  }
+},
+yaxis: {
+  axisBorder: {
+    show: false
+  },
+  axisTicks: {
+    show: false,
+  },
+  labels: {
+    show: false,
+    formatter: function (val) {
+      return "R$ " + val;
+    }
+  }
+
+},
+title: {
+  text: `Saldos mensais de ${year}`,
+  floating: true,
+  offsetY: 330,
+  align: 'center',
+  style: {
+    color: '#444'
+  }
+}
+};
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
