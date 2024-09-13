@@ -306,7 +306,25 @@ function calcSaldo(){
 
   const resultadoSaldo = resultado - totalDesp
 
-  document.getElementById('saldo_valor').innerHTML = `${resultadoSaldo.toFixed(2)}`
+  if (resultado >= 0 ){
+      document.getElementById('saldo_valor').innerHTML = `${resultadoSaldo.toFixed(2)}`
+  }else{
+    Toastify({
+      text: "Preencha todas as receitas necessárias!  ",
+      duration: 2000,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "center", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        fontSize:'14px',
+        boxShadow:'0',
+        fontWeight:"700",
+        borderRadius:"5px",
+        background:"#ff0060",
+      },
+    }).showToast();
+  }
 }
 
 // Abrir e fechar modal de editar perfil
