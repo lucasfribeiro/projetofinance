@@ -344,14 +344,19 @@ closeModal.addEventListener('click', () => {
 // Editar foto de perfil
 
 const userAvatar = document.getElementById('user_avatar2');
-const newPhoto = document.getElementById('new_photo');
+const newPhoto = document.getElementById('file');
 
 newPhoto.addEventListener('change', () => {
   userAvatar.src = URL.createObjectURL(newPhoto.files[0])
 })
 
+// Data
+
 const today = new Date();
 const year = today.getFullYear()
+
+
+// Gráficos 
 
 var options = {
   series: [{
